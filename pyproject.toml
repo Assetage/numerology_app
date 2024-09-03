@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "numerology_app"
+version = "0.1.0"
+description = "A numerology application"
+requires-python = ">=3.7"
+dependencies = [
+    "streamlit",
+    "fpdf",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["numerology_app*"]
+
+[tool.setuptools.package-data]
+"numerology_app.data" = ["*.json"]
+"numerology_app.pics" = ["*.png"]

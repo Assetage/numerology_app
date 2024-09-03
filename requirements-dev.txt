@@ -1,0 +1,15 @@
+# Code formatting
+black==23.3.0
+
+# Pre-commit
+pre-commit==3.3.2
+
+# Testing
+pytest==7.3.1
+pytest-cov==4.1.0
+
+# Debugging
+ipdb==0.13.13
+
+# Package management
+pip-tools==6.13.0
