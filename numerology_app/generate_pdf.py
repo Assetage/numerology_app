@@ -1,6 +1,6 @@
 import os
 
-import pkg_resources
+from importlib import resources
 from fpdf import FPDF
 from setup_fonts import add_fonts_to_fpdf
 
@@ -29,9 +29,8 @@ class PDF(FPDF):
 
         text = "nurassyl.kussaiyn"
         instagram_url = "https://www.instagram.com/nurassyl.kussaiyn/"
-        utils_pics_dir_path = os.path.join(
-            pkg_resources.resource_filename("numerology_app", "pics"), "utils_pics"
-        )
+        with resources.path("numerology_app.pics", "utils_pics") as path:
+            utils_pics_dir_path = str(path)
         instagram_icon = os.path.join(utils_pics_dir_path, "insta4.png")
 
         icon_height = self.font_size_pt * 0.7 / 2.835  # Convert pt to mm

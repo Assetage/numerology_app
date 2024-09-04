@@ -1,5 +1,6 @@
 streamlit==1.22.0
 fpdf==1.7.2
+setuptools>=45.0.0
 # Add other dependencies here
 
 # Install the local package
